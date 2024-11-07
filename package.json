@@ -1,0 +1,15 @@
+{
+  "name": "quote-generator-app",
+  "version": "1.0.0",
+  "description": "Quote Generator API for CS 361 - Software Engineering I",
+  "main": "quoteService.js",
+  "scripts": {
+    "api": "node quoteService.js"
+  },
+  "keywords": [],
+  "author": "Jason Conover",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
