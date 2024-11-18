@@ -1,11 +1,14 @@
-const quotes = require('./quotes')
-const cors = require('cors')
 var express = require('express')
+const cors = require('cors')
+var app = express()
+
+// set port
 const PORT = 8000
 
-var app = express()
-app.use(cors)
-app.use(express.static('public'))
+// import quotes
+const quotes = require('./quotes')
+
+app.use(cors())
 
 // GET request
 app.get('/', (req, res) => {
@@ -16,5 +19,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}...`)
+    console.log(`CORS-enabled web server listening on port ${PORT}...`)
 })
