@@ -1,14 +1,10 @@
 const quotes = require('./quotes')
+const cors = require('cors')
 var express = require('express')
 const PORT = 8000
 
 var app = express()
-
-app.use(
-    express.urlencoded({
-        extended: true,
-    })
-)
+app.use(cors)
 app.use(express.static('public'))
 
 // GET request
